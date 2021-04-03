@@ -24,6 +24,7 @@ set expandtab
 "set shell=fish
 set shell=zsh
 set backupskip=/tmp/*,/private/tmp/*
+set clipboard=unnamedplus
 
 " incremental substitution (neovim)
 if has('nvim')
