@@ -1,5 +1,10 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["json", "css", "markdown"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json",
+    "css",
+    "markdown",
+    "python"
+  ],
   "eslint.autoFixOnSave": true,
   "eslint.autoFix": true,
   "tsserver.enableJavascript": false,
@@ -12,6 +17,38 @@
       "requireRootPattern": true,
       "settings": {},
       "rootPatterns": [".flowconfig"]
+    },
+    "golang": {
+      // go get golang.org/x/tools/gopls@latest
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
+    "python": {
+      // pip install python-language-server
+      "command": "pyls",
+      "filetypes": ["python"],
+      // "trace.server": "verbose",
+      // "args": [
+      //   "-vv",
+      //   "--log-file",
+      //   "/Users/kashewnuts/.cache/tmp/coc-nvim.log"
+      // ],
+      "settings": {
+        "pyls": {
+          // "trace": {"server": "verbose"},
+          "plugins": {
+            "autopep8": { "enabled": false },
+            "pydocstyle": { "enabled": false },
+            "yapf": { "enabled": false },
+            "pylint": { "enabled": false }
+            // "pyls_mypy": {
+            //     "enable": true,
+            //     "live_mode": false
+            // }
+          }
+        }
+      }
     }
   },
   "diagnostic.errorSign": "✘",
