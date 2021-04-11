@@ -67,3 +67,6 @@ nmap <C-w><down> <C-w>-
 
 "-- fugitive
 cnoreabbrev gopen Gbrowse
+
+"-- tig
+nnoremap tig :<C-u>w<CR>:te tig<CR>

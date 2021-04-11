@@ -15,6 +15,12 @@ brew install the_silver_searcher
 # fzf
 brew install fzf
 
+# install commitizen
+npm install -g commitizen
+
+# install tig
+brew install tig
+
 # crate symboliclink
 export DIR_NAME=$(cd $(dirname $0); pwd)
 echo alias ide="${DIR_NAME}/ide.sh" >> ~/.zshrc
