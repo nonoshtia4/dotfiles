@@ -34,6 +34,7 @@ ln -sf ${DIR_NAME}/.tmux.conf ~/.tmux.conf
 ln -sf ${DIR_NAME}/.gitignore ~/.gitignore 
 ln -sf ${DIR_NAME}/.gitconfig ~/.gitconfig 
 ln -sf ${DIR_NAME}/.config/nvim ~/.config/nvim
+ln -sf ${DIR_NAME}/.tigrc ~/.tigrc
 cp -rp ${DIR_NAME}/.vim/* ~/.vim/.
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
