@@ -42,7 +42,7 @@
             "autopep8": { "enabled": false },
             "pydocstyle": { "enabled": false },
             "yapf": { "enabled": false },
-            "pylint": { "enabled": false }
+            "pylint": { "enabled": true }
             // "pyls_mypy": {
             //     "enable": true,
             //     "live_mode": false
