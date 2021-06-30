@@ -42,7 +42,8 @@
             "autopep8": { "enabled": false },
             "pydocstyle": { "enabled": false },
             "yapf": { "enabled": false },
-            "pylint": { "enabled": true }
+            "flake8": { "enabled": true },
+            "pylint": { "enabled": false }
             // "pyls_mypy": {
             //     "enable": true,
             //     "live_mode": false

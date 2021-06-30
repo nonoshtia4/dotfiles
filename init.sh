@@ -6,7 +6,8 @@ npm install -g yarn
 # setup defx
 sudo pip3 install neovim
 brew tap neovim/neovim
-brew install --HEAD neovim
+brew install --HEAD neovim tree-sitter luajit
+ln -s `which nvim` /usr/local/bin/vim
 
 # setup Nerd/font
 brew install font-hack-nerd-font
@@ -16,7 +17,10 @@ brew install the_silver_searcher
 brew install fzf
 
 # install commitizen
-npm install -g commitizen
+npm install -g commitizen typescript typescript-language-server
+npm install -g diagnostic-languageserver
+npm i -g eslint_d prettier
+
 
 # install tig
 brew install tig
@@ -39,3 +43,6 @@ ln -sf ${DIR_NAME}/.czrc ~/.czrc
 cp -rp ${DIR_NAME}/.vim/* ~/.vim/.
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
+# install vim-plug
+sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

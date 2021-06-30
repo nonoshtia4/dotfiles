@@ -184,9 +184,6 @@ endif
 source ~/.vimrc.maps
 source ~/.vimrc.lightline
 
-" mapping jj to ESC
-inoremap <silent> jj <ESC>
-
 " set use system clipboard
 set clipboard=unnamedplus
 
