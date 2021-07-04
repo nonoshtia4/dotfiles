@@ -1,3 +1,16 @@
+" ESCでIMEを確実にOFF
+inoremap <ESC> <ESC>:set iminsert=0<CR>  
+
+" 折り返し時に表示行単位での移動できるようにする
+nnoremap j gj
+nnoremap k gk
+
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+"vimrcをスペースドットで開く
+nnoremap <space>. :<c-u>tabedit $MYVIMRC<CR>
+
 nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d

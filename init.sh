@@ -13,8 +13,8 @@ ln -s `which nvim` /usr/local/bin/vim
 brew install font-hack-nerd-font
 # Silver searcher install
 brew install the_silver_searcher
-# fzf
-brew install fzf
+# fzf ripgrep(rg)
+brew install fzf ripgrep
 
 # install commitizen
 npm install -g commitizen typescript typescript-language-server

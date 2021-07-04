@@ -18,3 +18,8 @@ https://github.com/craftzdog/dotfiles-public
 - init.sh
 - If you need to clear dein cache
 - :call dein#recache_runtimepath()
+
+# メモ 2021/07/01
+
+- Tabnine のインストールスクリプトが M1 対応されていない completion-tabnine
+- 補完が Typescript 以外が自動でない気がする

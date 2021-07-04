@@ -60,12 +60,18 @@ set backspace=start,eol,indent
 set path+=**
 set wildignore+=*/node_modules/*
 
-" Turn off paste mode when leaving insert
+" Turn of paste mode when leaving insert
 autocmd InsertLeave * set nopaste
 
 " Add asterisks in block comments
 set formatoptions+=r
 
+" auto reload .vimrc
+augroup source-vimrc
+  autocmd!
+  autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
+  autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
+augroup END
 "}}}
 
 " Highlights "{{{
@@ -122,6 +128,33 @@ if has("unix")
 endif
 
 runtime ./maps.vim
+
+"-------------------------------------------------------------------------------
+" Other plugins
+"-------------------------------------------------------------------------------
+
+" vim-go
+let g:go_disable_autoinstall = 1
+
+" vim-json
+let g:vim_json_syntax_conceal = 0
+
+" Status line
+if !exists('*fugitive#statusline')
+  set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
+  set statusline+=%=
+  set statusline+=%{fugitive#statusline()}
+endif
+
+" JSX
+let g:jsx_ext_required = 0
+
+" Tern
+" Disable auto preview window
+set completeopt-=preview
+
+" localvimrc
+let g:localvimrc_ask = 0
 "}}}
 
 " Syntax theme "{{{
