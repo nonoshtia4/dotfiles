@@ -13,6 +13,17 @@ https://github.com/craftzdog/dotfiles-public
 - tmux config
 - git config
 
+### Shell setup
+
+- Fish shell
+- Fisher - Plugin manager
+- Tide - Shell theme. Use version 5: fisher install ilancosman/tide@v5
+- Nerd fonts - Powerline-patched fonts. I use Hack.
+- z for fish - Directory jumping
+- Exa - ls replacement
+- ghq - Local Git repository organizer
+- peco - Interactive filtering
+
 ## How to use
 
 - init.sh

@@ -162,7 +162,14 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 -- pyls
 nvim_lsp.pyls.setup{
-  on_attach = on_attach
+  on_attach = on_attach,
+  filetypes = {"python"}
+}
+
+-- gopl
+nvim_lsp.gopls.setup{
+  on_attach = on_attach,
+  filetypes = {"go"}
 }
 
 EOF

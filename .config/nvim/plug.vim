@@ -7,9 +7,8 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'cohama/lexima.vim'
-Plug 'groenewege/vim-less', { 'for': 'less' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'fatih/vim-go'
+Plug 'junegunn/vader.vim'
+Plug 'Vimjas/vint'
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
@@ -25,7 +24,11 @@ if has("nvim")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'aca/completion-tabnine', { 'do': './install.sh' }
+  "Plug 'aca/completion-tabnine', { 'do': './install.sh' }
 endif
+
+Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'fatih/vim-go'
 
 call plug#end()
