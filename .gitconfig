@@ -1,6 +1,6 @@
 [user]
-	email = nonosshita4@gmail.com
-	name = nonoshtia4
+	email = nonoshita4@gmail.com
+	name = nonoshita4
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
@@ -57,3 +57,5 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
+[pull]
+	rebase = false
