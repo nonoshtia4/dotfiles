@@ -15,7 +15,6 @@ lspkind.init({
   preset = 'codicons',
 
   -- override preset symbols
-  --
   -- default: {}
   symbol_map = {
     Text = "",
@@ -44,4 +43,4 @@ lspkind.init({
     Operator = "",
     TypeParameter = ""
   },
-})e
+})
