@@ -17,7 +17,7 @@ brew install the_silver_searcher
 brew install fzf ripgrep
 
 # install commitizen
-npm install -g commitizen typescript typescript-language-server
+npm install -g commitizen typescript typescript-language-server prettier_d_slim
 npm install -g diagnostic-languageserver
 npm i -g eslint_d prettier
 

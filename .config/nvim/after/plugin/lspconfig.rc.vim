@@ -3,7 +3,7 @@ if !exists('g:lspconfig')
 endif
 
 lua << EOF
---vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("debug")
 EOF
 
 lua << EOF
@@ -53,7 +53,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[augroup END]]
   end
 
-  require'completion'.on_attach(client, bufnr)
+  -- require'completion'.on_attach(client, bufnr)
 
   --protocol.SymbolKind = { }
   protocol.CompletionItemKind = {
@@ -160,6 +160,18 @@ nvim_lsp.diagnosticls.setup {
   }
 }
 
+-- pyls
+-- nvim_lsp.pyls.setup{
+--   on_attach = on_attach,
+--   filetypes = {"python"}
+-- }
+
+-- gopl
+nvim_lsp.gopls.setup{
+  on_attach = on_attach,
+  filetypes = {"go"}
+}
+
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -172,16 +184,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
--- pyls
-nvim_lsp.pyls.setup{
-  on_attach = on_attach,
-  filetypes = {"python"}
-}
-
--- gopl
-nvim_lsp.gopls.setup{
-  on_attach = on_attach,
-  filetypes = {"go"}
-}
 
 EOF
