@@ -160,11 +160,11 @@ nvim_lsp.diagnosticls.setup {
   }
 }
 
--- pyls
--- nvim_lsp.pyls.setup{
---   on_attach = on_attach,
---   filetypes = {"python"}
--- }
+-- pyright
+nvim_lsp.pyright.setup{
+  on_attach = on_attach,
+  filetypes = {"python"}
+}
 
 -- gopl
 nvim_lsp.gopls.setup{
