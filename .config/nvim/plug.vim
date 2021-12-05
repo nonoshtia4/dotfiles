@@ -34,6 +34,11 @@ if has("nvim")
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
   "Plug 'aca/completion-tabnine', { 'do': './install.sh' }
+  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+  " For Debbuging
+  Plug 'nvim-telescope/telescope-dap.nvim'
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'mfussenegger/nvim-dap-python'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

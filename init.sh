@@ -4,7 +4,7 @@ brew install node.js
 npm install -g yarn
 
 # setup defx
-sudo pip3 install neovim
+sudo pip3 install neovim debugpy
 brew tap neovim/neovim
 brew install --HEAD neovim tree-sitter luajit
 ln -s `which nvim` /usr/local/bin/vim
