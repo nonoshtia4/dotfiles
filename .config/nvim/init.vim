@@ -142,6 +142,16 @@ let g:go_gocode_propose_source = 0
 " vim-json
 let g:vim_json_syntax_conceal = 0
 
+" UltiSnips
+let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsEditSplit = 'normal'
+"let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips']
+let g:UltiSnipsEnableSnipMate = 0
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger = '<C-f>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
+command! SNIP UltiSnipsEdit
+
 " Status line
 if !exists('*fugitive#statusline')
   set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
