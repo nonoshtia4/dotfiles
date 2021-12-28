@@ -14,8 +14,12 @@ alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
+alias d "docker"
+alias dc "docker-compose"
 alias g git
-alias ide /Users/nonoshitayuusuke/dotfiles/ide.sh
+alias ide ~/dotfiles/ide.sh
+alias es "exercism submit"
+
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
