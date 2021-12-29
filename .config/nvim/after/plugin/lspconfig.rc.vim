@@ -172,6 +172,17 @@ nvim_lsp.gopls.setup{
   filetypes = {"go"}
 }
 
+-- Ruby solargraph
+nvim_lsp.solargraph.setup{
+  on_attach = on_attach,
+  filetypes = {"ruby"}
+}
+
+-- Java
+nvim_lsp.java_language_server.setup{
+  on_attach = on_attach,
+  filetypes = {"java"}
+}
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
