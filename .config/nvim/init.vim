@@ -144,7 +144,7 @@ let g:vim_json_syntax_conceal = 0
 
 " UltiSnips
 let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsEditSplit = 'normal'
+let g:UltiSnipsEditSplit = 'vertical'
 "let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips']
 let g:UltiSnipsEnableSnipMate = 0
 let g:UltiSnipsExpandTrigger="<C-l>"
