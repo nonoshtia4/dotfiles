@@ -3,7 +3,7 @@ if !exists('g:lspconfig')
 endif
 
 lua << EOF
--- vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("debug")
 EOF
 
 lua << EOF
@@ -135,6 +135,7 @@ nvim_lsp.diagnosticls.setup {
     formatters = {
       eslint_d = {
         command = 'eslint_d',
+        rootPatterns = { '.git' },
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
         rootPatterns = { '.git' },
       },

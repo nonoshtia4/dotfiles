@@ -6,9 +6,11 @@ call plug#begin()
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+
 " For vimscript test of exercism
 Plug 'junegunn/vader.vim'
 Plug 'Vimjas/vint'
+
 " Ultisnips
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -34,6 +36,7 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
+  
   "Plug 'aca/completion-tabnine', { 'do': './install.sh' }
   Plug 'quangnguyen30192/cmp-nvim-ultisnips'
   " For Debbuging
