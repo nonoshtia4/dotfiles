@@ -3,18 +3,18 @@ if !exists('g:loaded_cmp') | finish | endif
 set completeopt=menuone,noinsert,noselect
 
 lua <<EOF
-local luasnip = require 'luasnip'
-local cmp = require'cmp'
-local lspkind = require'lspkind'
+  local luasnip = require 'luasnip'
+  local cmp = require'cmp'
+  local lspkind = require'lspkind'
 
-cmp.setup({
-snippet = {
-  expand = function(args)
-  require('luasnip').lsp_expand(args.body)
-  -- vim.fn["UltiSnips#Anon"](args.body)
-end,
-},
-    mapping = {
+  cmp.setup({
+    snippet = {
+      expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+      -- vim.fn["UltiSnips#Anon"](args.body)
+    end,
+    },
+    mapping = cmp.mapping.preset.insert({
       ['<Tab>'] = function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
@@ -41,18 +41,18 @@ end,
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
       }),
-    },
-  sources = cmp.config.sources({
-  { name = 'nvim_lsp' },
-  { name = 'luasnip' },
-  { name = 'ultisnips' },
-  }, { 
-  { name = 'buffer' }, 
-  }),
-formatting = {
-  format = lspkind.cmp_format({with_text = false, maxwidth = 50})
-  }
-})
+    }),
+    sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'ultisnips' },
+    }, { 
+    { name = 'buffer' }, 
+    }),
+  formatting = {
+    format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    }
+  })
 
-vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
+  vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
 EOF

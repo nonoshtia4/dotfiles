@@ -20,6 +20,7 @@ brew install fzf ripgrep
 npm install -g commitizen typescript typescript-language-server prettier_d_slim
 npm install -g diagnostic-languageserver
 npm i -g eslint_d prettier
+npm i -g neovim
 
 
 # install tig
