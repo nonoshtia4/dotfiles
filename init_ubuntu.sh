@@ -1,30 +1,27 @@
 # !/bin/bash
 # coc.vimを使うためにnode のインストールが必要
-brew install node.js
-npm install -g yarn
+sudo apt install nodejs -y
+sudo apt install npm -y
+# sudo npm install -g yarn 
 
 # setup defx
-sudo pip3 install neovim debugpy
-brew tap neovim/neovim
-brew install --HEAD neovim tree-sitter luajit
-ln -s `which nvim` /usr/local/bin/vim
+sudo pip install neovim debugpy
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update 
+sudo apt install neovim
+sudo apt install --HEAD neovim tree-sitter luajit
+sudo ln -s `which nvim` /usr/local/bin/vim
 
 # setup Nerd/font
-brew install font-hack-nerd-font
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 # Silver searcher install
-brew install the_silver_searcher
+sudo apt install the_silver_searcher
 # fzf ripgrep(rg)
-brew install fzf ripgrep ghq
+sudo apt install fzf ripgrep
 
 # install commitizen
-npm install -g commitizen typescript typescript-language-server prettier_d_slim
-npm install -g diagnostic-languageserver
-npm i -g eslint_d prettier
-npm i -g neovim
-
-
-# install tig
-brew install tig
+sudo npm install -g commitizen typescript typescript-language-server prettier_d_slim eslint tree-sitter
 
 # crate symboliclink
 export DIR_NAME=$(cd $(dirname $0); pwd)
@@ -35,9 +32,9 @@ ln -sf ${DIR_NAME}/.vimrc.lightline ~/.vimrc.lightline
 ln -sf ${DIR_NAME}/.vimrc ~/.vimrc
 ln -sf ${DIR_NAME}/.tmux.powerline.conf ~/.tmux.powerline.conf
 ln -sf ${DIR_NAME}/.tmux.conf.osx ~/.tmux.conf.osx
-ln -sf ${DIR_NAME}/.tmux.conf ~/.tmux.conf 
-ln -sf ${DIR_NAME}/.gitignore ~/.gitignore 
-ln -sf ${DIR_NAME}/.gitconfig ~/.gitconfig 
+ln -sf ${DIR_NAME}/.tmux.conf ~/.tmux.conf
+ln -sf ${DIR_NAME}/.gitignore ~/.gitignore
+ln -sf ${DIR_NAME}/.gitconfig ~/.gitconfig
 ln -sf ${DIR_NAME}/.config/nvim ~/.config/nvim
 ln -sf ${DIR_NAME}/.tigrc ~/.tigrc
 ln -sf ${DIR_NAME}/.czrc ~/.czrc

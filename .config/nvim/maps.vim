@@ -94,3 +94,7 @@ nnoremap tig :<C-u>w<CR>:te tig<CR>
 
 " mapping jj to ESC
 inoremap <silent> jj <ESC>
+
+" Exchange leader key to space
+let mapleader = "\<SPACE>"
+
