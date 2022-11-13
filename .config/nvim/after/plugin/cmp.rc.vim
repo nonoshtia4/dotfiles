@@ -28,13 +28,19 @@ lua <<EOF
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'ultisnips' },
-    }, { 
-    { name = 'buffer' }, 
+    { name = 'buffer' },
     }),
   formatting = {
     format = lspkind.cmp_format({with_text = false, maxwidth = 50})
     }
   })
 
-  vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
+vim.cmd [[
+  set completeopt=menuone,noinsert,noselect
+  highlight! default link CmpItemKind CmpItemMenuDefault
+]]
+
+-- " Use <Tab> and <S-Tab> to navigate through popup menu
+-- inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+-- inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 EOF

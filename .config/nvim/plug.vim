@@ -34,6 +34,8 @@ if has("nvim")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-file-browser.nvim'
+  Plug 'nvim-telescope/telescope-media-files.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
   
@@ -43,6 +45,11 @@ if has("nvim")
   Plug 'nvim-telescope/telescope-dap.nvim'
   Plug 'mfussenegger/nvim-dap'
   Plug 'mfussenegger/nvim-dap-python'
+  "telekasten.nvim
+  Plug 'renerocksai/telekasten.nvim'
+  Plug 'renerocksai/calendar-vim'
+  Plug 'iamcco/markdown-preview.nvim'
+  Plug 'mzlogin/vim-markdown-toc'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

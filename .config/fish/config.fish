@@ -16,9 +16,11 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias d "docker"
 alias dc "docker-compose"
+alias dp "docker system prune"
 alias g git
 alias ide ~/dotfiles/ide.sh
 alias es "exercism submit"
+alias vi "vim"
 
 command -qv nvim && alias vim nvim
 

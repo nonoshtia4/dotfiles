@@ -147,7 +147,7 @@ let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsEditSplit = 'vertical'
 "let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips']
 let g:UltiSnipsEnableSnipMate = 0
-let g:UltiSnipsExpandTrigger="<C-l>"
+let g:ltiSnipsExpandTrigger="<C-l>"
 let g:UltiSnipsJumpForwardTrigger = '<C-f>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
 command! SNIP UltiSnipsEdit
