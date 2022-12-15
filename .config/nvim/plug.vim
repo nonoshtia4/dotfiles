@@ -56,6 +56,8 @@ if has("nvim")
   " If you have nodejs and yarn
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
   Plug 'mzlogin/vim-markdown-toc'
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

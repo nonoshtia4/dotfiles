@@ -9,7 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
-    'svrana/neosolarized.nvim'
+    'svrana/neosolarized.nvim',
     requires = {'tjdevries/colorbuddy.nvim' }
   }
   use 'nvim-lualine/lualine.nvim' -- Statusline
