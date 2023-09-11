@@ -1,20 +1,28 @@
 # !/bin/bash
+# Prerequisite :  Installed homebrew
+
+# Install tmux
+brew install tmux
+# Install warp
+brew install --cask warp
+
 # coc.vimを使うためにnode のインストールが必要
-brew install node.js
-npm install -g yarn
+# brew install node.js
+# npm install -g yarn
 
 # setup defx
 sudo pip3 install neovim debugpy
 brew tap neovim/neovim
 brew install --HEAD neovim tree-sitter luajit
-ln -s `which nvim` /usr/local/bin/vim
 
 # setup Nerd/font
-brew install font-hack-nerd-font
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
 # Silver searcher install
-brew install the_silver_searcher
-# fzf ripgrep(rg)
-brew install fzf ripgrep ghq
+# brew install the_silver_searcher
+# command line tools/fzf ripgrep(rg)
+brew install fzf ghq fd dust bottom ripgrep
+
 
 # install commitizen
 npm install -g commitizen typescript typescript-language-server prettier_d_slim
@@ -27,6 +35,7 @@ npm i -g neovim
 brew install tig
 
 # crate symboliclink
+ln -s `which nvim` /opt/homebrew/bin/vim
 export DIR_NAME=$(cd $(dirname $0); pwd)
 echo alias ide="${DIR_NAME}/ide.sh" >> ~/.zshrc
 ln -sf ${DIR_NAME}/.vimrc.osx ~/.vimrc.osx
